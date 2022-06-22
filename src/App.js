@@ -1,3 +1,4 @@
+import "./categories.styles.scss";
 const App = () => {
   const catagories = [
     {
@@ -28,6 +29,7 @@ const App = () => {
   ];
 
   return (
+    // Main Container holds all categories
     <div className="categories-container">
       {catagories.map(({ title, imageUrl }) => (
         <div className="category-container">
