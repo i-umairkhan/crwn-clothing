@@ -4,6 +4,8 @@ import {
   createUserDocumentFromAuth,
 } from "../../Utils/Firebase/Firebase.Utils";
 
+import FormInput from "../Form-Input/Form-Input.Component.jsx";
+
 const defaultFormFeilds = {
   displayName: "",
   email: "",
@@ -52,32 +54,34 @@ const SignUpForm = () => {
     <div>
       <h1>Sign up with email and passsword</h1>
       <form onSubmit={handleSubmit}>
-        <label>Display Name</label>
-        <input
+        <FormInput
+          lable="Display Name"
           type="text"
           required
           name="displayName"
           onChange={handleChange}
           value={displayName}
         />
-        <label>Email</label>
-        <input
+        <FormInput
+          lable="Email"
           type="email"
           required
           name="email"
           onChange={handleChange}
           value={email}
         />
-        <label>Password</label>
-        <input
+
+        <FormInput
+          lable="Password"
           type="password"
           required
           name="password"
           onChange={handleChange}
           value={password}
         />
-        <label>Confirm Password</label>
-        <input
+
+        <FormInput
+          lable="Confirm"
           type="password"
           required
           name="confirmPassword"
