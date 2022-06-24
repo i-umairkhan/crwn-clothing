@@ -12,7 +12,7 @@ const SignIn = () => {
   return (
     <div>
       <h1>Sign In</h1>
-      <button onClick={logGoogleUser}>SignIn With Google</button>
+      <button onClick={logGoogleUser}>SignIn With Google Popup</button>
     </div>
   );
 };
