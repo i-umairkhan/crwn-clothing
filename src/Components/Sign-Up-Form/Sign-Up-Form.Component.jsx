@@ -5,6 +5,8 @@ import {
 } from "../../Utils/Firebase/Firebase.Utils";
 
 import FormInput from "../Form-Input/Form-Input.Component.jsx";
+import "./Sign-Up-Form.Styles.scss";
+import Button from "../Button/Button.Component.jsx";
 
 const defaultFormFeilds = {
   displayName: "",
@@ -25,7 +27,7 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert("Password do not match");
       return;
     }
@@ -51,8 +53,9 @@ const SignUpForm = () => {
   };
 
   return (
-    <div>
-      <h1>Sign up with email and passsword</h1>
+    <div className="sign-up-container">
+      <h2>Don't have an account?</h2>
+      <span>Sign up with email and passsword</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           lable="Display Name"
@@ -88,7 +91,7 @@ const SignUpForm = () => {
           onChange={handleChange}
           value={confirmPassword}
         />
-        <button type="submit">Sign Up</button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );
