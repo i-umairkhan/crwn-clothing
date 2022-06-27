@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  createAuthUserWithEmailAndPassword,
   signInAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
   signInWithGooglePopup,
@@ -40,6 +39,9 @@ const SignInForm = () => {
       );
       console.log(response);
       resetFormFeilds();
+      if (response) {
+        console.log("user loged in ");
+      }
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":

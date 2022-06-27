@@ -7,8 +7,10 @@ const Shop = () => {
   return <h1>I am Shop</h1>;
 };
 
+// Main App Component
 const App = () => {
   return (
+    //  Mian Routes component
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index={true} element={<Home />} />
