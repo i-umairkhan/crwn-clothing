@@ -18,6 +18,4 @@ const App = () => {
   );
 };
 
-// Part 9 React Context Continued - Part 06 ADD TO CART PART 1
-
 export default App;
